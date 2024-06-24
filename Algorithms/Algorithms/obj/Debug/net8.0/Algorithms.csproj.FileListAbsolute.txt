@@ -1,0 +1,14 @@
+C:\Jed\dev\Habits\Algorithms\Algorithms\bin\Debug\net8.0\Algorithms.exe
+C:\Jed\dev\Habits\Algorithms\Algorithms\bin\Debug\net8.0\Algorithms.deps.json
+C:\Jed\dev\Habits\Algorithms\Algorithms\bin\Debug\net8.0\Algorithms.runtimeconfig.json
+C:\Jed\dev\Habits\Algorithms\Algorithms\bin\Debug\net8.0\Algorithms.dll
+C:\Jed\dev\Habits\Algorithms\Algorithms\bin\Debug\net8.0\Algorithms.pdb
+C:\Jed\dev\Habits\Algorithms\Algorithms\obj\Debug\net8.0\Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Jed\dev\Habits\Algorithms\Algorithms\obj\Debug\net8.0\Algorithms.AssemblyInfoInputs.cache
+C:\Jed\dev\Habits\Algorithms\Algorithms\obj\Debug\net8.0\Algorithms.AssemblyInfo.cs
+C:\Jed\dev\Habits\Algorithms\Algorithms\obj\Debug\net8.0\Algorithms.csproj.CoreCompileInputs.cache
+C:\Jed\dev\Habits\Algorithms\Algorithms\obj\Debug\net8.0\Algorithms.dll
+C:\Jed\dev\Habits\Algorithms\Algorithms\obj\Debug\net8.0\refint\Algorithms.dll
+C:\Jed\dev\Habits\Algorithms\Algorithms\obj\Debug\net8.0\Algorithms.pdb
+C:\Jed\dev\Habits\Algorithms\Algorithms\obj\Debug\net8.0\Algorithms.genruntimeconfig.cache
+C:\Jed\dev\Habits\Algorithms\Algorithms\obj\Debug\net8.0\ref\Algorithms.dll
