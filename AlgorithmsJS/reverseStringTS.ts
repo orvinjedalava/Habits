@@ -1,4 +1,4 @@
-function reverseString(input:string) : string {
+function reverseStringTS(input:string) : string {
     let result: string[] = input.split('');
 
     for(let i:number = 0, j:number = result.length - 1; i < j; i++, j--) {
@@ -9,5 +9,5 @@ function reverseString(input:string) : string {
     return result.join('');
 }
 
-console.log(reverseString('hello world'));
-console.log(reverseString('hire me'));
+console.log(reverseStringTS('hello world'));
+console.log(reverseStringTS('hire me'));
