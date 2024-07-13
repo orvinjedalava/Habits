@@ -93,5 +93,19 @@ namespace TestProject1
                 Assert.Equal(expectedResult[i], result[i]);
             }
         }
+
+        [Fact]
+        public void MergeSort_Test()
+        {
+            int[] input = { 3, 7, 6, -10, 15, 23, 55, -13 };
+            int[] expectedResult = { -13, -10, 3, 6, 7, 15, 23, 55 };
+
+            int[] result = _service.MergeSort(input);
+
+            for (int i = 0; i < expectedResult.Length; i++)
+            {
+                Assert.Equal(expectedResult[i], result[i]);
+            }
+        }
     }
 }

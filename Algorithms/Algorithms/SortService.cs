@@ -189,5 +189,67 @@ namespace Algorithms
         }
 
         #endregion
+
+        #region MergeSort
+
+        public int[] MergeSort(int[] input)
+        {
+            if (input.Length <= 1)
+                return input;
+
+            int mid = input.Length / 2;
+            int[] leftArr = new int[mid];
+            int[] rightArr = new int[input.Length - mid];
+
+            Array.Copy(input, 0, leftArr, 0, leftArr.Length);
+            Array.Copy(input, mid, rightArr, 0, rightArr.Length);
+
+            int[] sortedLeftArr = MergeSort(leftArr);
+            int[] sortedRightArr = MergeSort(rightArr);
+
+            return Merge(sortedLeftArr, sortedRightArr);
+
+        }
+
+        private int[] Merge(int[] leftArr, int[] rightArr)
+        {
+            int[] result = new int[leftArr.Length + rightArr.Length];
+            int i = 0;
+            int j = 0;
+            int k = 0;
+
+            while(i < leftArr.Length && j < rightArr.Length)
+            {
+                if (leftArr[i] < rightArr[j])
+                {
+                    result[k] = leftArr[i];
+                    i++;
+                }
+                else
+                {
+                    result[k] = rightArr[j];
+                    j++;
+                }
+                k++;
+            }
+
+            while(i < leftArr.Length)
+            {
+                result[k] = leftArr[i];
+                i++;
+                k++;
+            }
+
+            while (j < rightArr.Length)
+            {
+                result[k] = rightArr[j];
+                j++;
+                k++;
+            }
+
+            return result;
+        }
+
+        #endregion
     }
 }
