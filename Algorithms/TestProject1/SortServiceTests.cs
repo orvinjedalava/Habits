@@ -79,5 +79,19 @@ namespace TestProject1
                 Assert.Equal(expectedResult[i], result[i]);
             }
         }
+
+        [Fact]
+        public void RadixSort_Test()
+        {
+            int[] input = { 170, 45, 75, 90, 802, 24, 2, 66 };
+            int[] expectedResult = { 2, 24, 45, 66, 75, 90, 170, 802 };
+
+            int[] result = _service.RadixSort(input);
+
+            for (int i = 0; i < expectedResult.Length; i++)
+            {
+                Assert.Equal(expectedResult[i], result[i]);
+            }
+        }
     }
 }

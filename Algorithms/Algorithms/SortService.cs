@@ -143,5 +143,51 @@ namespace Algorithms
         }
 
         #endregion
+
+        #region Radix Sort
+
+        public int[] RadixSort(int[] input)
+        {
+            var map = new Dictionary<int, Queue<int>>();
+            int exponent = 1;
+
+            int maxValue = input[0];
+
+            foreach (int item in input.ToList())
+                maxValue = maxValue < item ?
+                    item
+                    : maxValue;
+
+            while(maxValue / exponent > 0)
+            {
+                foreach(int item in input.ToList())
+                {
+                    int mapIndex = (item / exponent) % 10;
+                    if (!map.ContainsKey(mapIndex))
+                        map.Add(mapIndex, new Queue<int>());
+                    map[mapIndex].Enqueue(item);
+                }
+
+                int inputIndex = 0;
+                for (int i = 0; i <= 9; i++)
+                {
+                    if (map.ContainsKey(i))
+                    {
+                        while (map[i].Count > 0)
+                        {
+                            input[inputIndex] = map[i].Dequeue();
+                            inputIndex++;
+                        }
+                    }
+                }
+
+                map.Clear();
+                exponent *= 10;
+            }
+
+            return input;
+        }
+
+        #endregion
     }
 }
