@@ -67,9 +67,81 @@ namespace Algorithms
             return input;
         }
 
+        #region QuickSort
         public int[] QuickSort(int[] input)
         {
+            QuickSort(input, 0, input.Length - 1);
+
             return input;
         }
+
+        private void QuickSort(int[] input, int low, int high)
+        {
+            if (low < high)
+            {
+                int pivotIndex = Partition(input, low, high);
+                QuickSort(input, low, pivotIndex - 1);
+                QuickSort(input, pivotIndex + 1, high);
+            }
+        }
+
+        private int Partition(int[] input, int low, int high)
+        {
+            int pivot = input[high];
+            int i = low - 1;
+            int temp;
+
+            for (int j = low; j < high; j++)
+            {
+                if (input[j] <= pivot)
+                {
+                    i++;
+                    temp = input[i];
+                    input[i] = input[j];
+                    input[j] = temp;
+                }
+            }
+
+            temp = input[i + 1];
+            input[i + 1] = input[high];
+            input[high] = temp;
+            return i + 1;
+        }
+
+        #endregion
+
+        #region CountingSort
+
+        public int[] CountingSort(int[] input)
+        {
+            int maxValue = input[0];
+
+            foreach (int item in input.ToList())
+                maxValue = maxValue < item ?
+                    item
+                    : maxValue;
+
+            int[] countResult = new int[maxValue + 1];
+
+            foreach(int item in input.ToList())
+            {
+                countResult[item]++;
+            }
+
+            int index = 0;
+            for(int i = 0; i <= maxValue; i++)
+            {
+                while (countResult[i] > 0)
+                {
+                    input[index] = i;
+                    index++;
+                    countResult[i]--;
+                }
+            }
+
+            return input;
+        }
+
+        #endregion
     }
 }

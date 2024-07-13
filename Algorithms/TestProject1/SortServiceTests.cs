@@ -55,10 +55,24 @@ namespace TestProject1
         [Fact]
         public void QuickSort_Test()
         {
-            int[] input = { 8, 5, 7, 3, 1 };
-            int[] expectedResult = { 1, 3, 5, 7, 8 };
+            int[] input = { 8, 5, 7, 3, 1, 2 };
+            int[] expectedResult = { 1, 2, 3, 5, 7, 8 };
 
             int[] result = _service.QuickSort(input);
+
+            for (int i = 0; i < expectedResult.Length; i++)
+            {
+                Assert.Equal(expectedResult[i], result[i]);
+            }
+        }
+
+        [Fact]
+        public void CountingSort_Test()
+        {
+            int[] input = { 4, 2, 2, 6, 3, 3, 1, 6, 5, 2, 3 };
+            int[] expectedResult = { 1, 2, 2, 2, 3, 3, 3, 4, 5, 6, 6 };
+
+            int[] result = _service.CountingSort(input);
 
             for (int i = 0; i < expectedResult.Length; i++)
             {
