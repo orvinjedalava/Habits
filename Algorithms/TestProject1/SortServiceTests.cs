@@ -107,5 +107,17 @@ namespace TestProject1
                 Assert.Equal(expectedResult[i], result[i]);
             }
         }
+
+        [Fact]
+        public void BinarySearch_Test()
+        {
+            int[] input = { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 };
+            int target = 15;
+            int expectedResult = 7;
+            
+            int result = _service.BinarySearch(input, target);
+
+            Assert.Equal(expectedResult, result);
+        }
     }
 }
