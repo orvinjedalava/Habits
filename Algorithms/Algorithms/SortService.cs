@@ -8,6 +8,7 @@ namespace Algorithms
 {
     public class SortService
     {
+        #region BubbleSort
         public int[] BubbleSort(int[] input)
         {
             for (int i = 0; i < input.Length; i++)
@@ -26,6 +27,10 @@ namespace Algorithms
             return input;
         }
 
+        #endregion
+
+        #region InsertionSort
+
         public int[] InsertionSort(int[] input)
         {
             for (int i = 1; i < input.Length; i++)
@@ -43,6 +48,10 @@ namespace Algorithms
 
             return input;
         }
+
+        #endregion
+
+        #region SelectionSort
 
         public int[] SelectionSort(int[] input)
         {
@@ -66,6 +75,8 @@ namespace Algorithms
             }
             return input;
         }
+
+        #endregion
 
         #region QuickSort
         public int[] QuickSort(int[] input)
